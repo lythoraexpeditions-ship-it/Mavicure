@@ -325,7 +325,7 @@
   /* INCLUDES */
   .includes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     background: rgba(212,168,83,0.1);
     margin-top: 56px;
@@ -620,6 +620,9 @@
     .form-radio-group { grid-template-columns: 1fr; }
     section { padding: 72px 24px; }
     .day-card { border-right: none; border-bottom: 1px solid rgba(212,168,83,0.15); }
+    .include-title { font-size: 15px; }
+    .include-desc { font-size: 14px; line-height: 1.7; }
+    .includes-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -631,11 +634,12 @@
   <span class="hero-tag">Expedición Mavicure · Guainía, Colombia</span>
 
   <div class="hero-content">
+    <p class="hero-eyebrow">Cerros de Mavicure, Guainía</p>
     <h1 class="hero-title">
-      Cerros de<br><em>Mavicure</em>
+      Donde el tiempo<br>se detuvo hace<br><em>1,700 millones</em><br>de años.
     </h1>
     <p class="hero-sub">
-      4 días en el lugar más antiguo de Colombia. Grupos privados de máximo 6 personas. Una experiencia que no se vende en ninguna agencia.
+      Una expedición privada de 4 días diseñada para quienes buscan silencio absoluto, no solo un paisaje. Máximo 6 exploradores por grupo.
     </p>
 
     <div class="hero-stats">
@@ -655,7 +659,7 @@
       </div>
     </div>
 
-    <a href="#reserva" class="cta-primary">Quiero un cupo</a>
+    <a href="#reserva" class="cta-primary">Solicitar itinerario</a>
   </div>
 
   <div style="position:absolute;bottom:16px;right:20px;font-size:10px;color:rgba(245,240,232,0.35);letter-spacing:0.05em;z-index:3;text-align:right;">"Cerros del Mavicure, Guainía, Colombia" · Felipe Rodríguez-Moreno · CC BY-NC-ND 2.0</div>
@@ -669,9 +673,9 @@
 <!-- INTRO -->
 <section>
   <span class="section-label">Por qué existe esto</span>
-  <h2 class="section-title">No es un tour.<br><em>Es un rito de paso.</em></h2>
+  <h2 class="section-title">No es un tour.<br><em>Es una expedición de autor.</em></h2>
   <p class="section-body">
-    Guainía no es un destino que se visita. Es un destino que te visita a ti. Los Cerros de Mavicure llevan 1.700 millones de años en silencio. Esta expedición te lleva hasta ellos de la única forma en que tiene sentido: sin prisa, sin grupos masivos, con guías que llevan toda la vida en ese río y no conocen otra forma de vivirlo.
+    Guainía no es un destino que se visita. Es un destino que te visita a ti. Los Cerros de Mavicure llevan 1.700 millones de años en silencio. Esta expedición te lleva hasta ellos de la única forma en que tiene sentido: <strong>sin prisa, sin grupos masivos</strong>, con guías nativos que interpretan la selva, no solo la caminan.
   </p>
 
   <div class="quote-block">
@@ -697,13 +701,13 @@
     <div class="day-card">
       <div class="day-num">01</div>
       <div class="day-title">El umbral</div>
-      <p class="day-desc">Zarpe directo desde el aeropuerto. El río borra la ciudad en 20 minutos. Llegada a la comunidad indígena de Remanso. Los cerros aparecen en el horizonte sin anuncio.</p>
+      <p class="day-desc">Llegada privada y primera noche bajo las estrellas con logística de autor. El río borra la ciudad en 20 minutos. Llegada a la comunidad indígena de Remanso. Los cerros aparecen en el horizonte sin anuncio.</p>
       <p class="day-highlight">→ Comunidad Remanso · Atardecer en la base</p>
     </div>
     <div class="day-card">
       <div class="day-num">02</div>
       <div class="day-title">La conquista</div>
-      <p class="day-desc">Ascenso en la oscuridad con guía indígena. La cima antes del amanecer. Cuando el sol aparece detrás del Cerro Pajarito, otros grupos apenas salen de sus hoteles. Tarde en Caño San Joaquín, completamente solos.</p>
+      <p class="day-desc">Cima del Mavicure al amanecer, antes de que llegue el turismo masivo. Ascenso en la oscuridad con guía indígena. Cuando el sol aparece detrás del Cerro Pajarito, otros grupos apenas salen de sus hoteles. Tarde en Caño San Joaquín, completamente solos.</p>
       <p class="day-highlight">→ Mavicure al amanecer · Aguas rojas</p>
     </div>
     <div class="day-card">
@@ -741,13 +745,13 @@
     </div>
     <div class="include-item">
       <span class="include-icon">✦</span>
-      <div class="include-title">Alimentación</div>
-      <p class="include-desc">Todas las comidas. Gastronomía local real preparada por la comunidad y restaurantes seleccionados.</p>
+      <div class="include-title">Gastronomía de autor</div>
+      <p class="include-desc">Menú diseñado con variedad de proteínas y opciones orgánicas, preparado por la comunidad y chefs locales. La selva no es un sacrificio — es un banquete.</p>
     </div>
     <div class="include-item">
       <span class="include-icon">✦</span>
-      <div class="include-title">Transporte exclusivo</div>
-      <p class="include-desc">Lancha privada para el grupo. Sin compartir con otros turistas en ningún momento.</p>
+      <div class="include-title">Navegación premium</div>
+      <p class="include-desc">Lancha privada exclusiva para el grupo con protección solar y kit de confort. Sin compartir con otros turistas, sin improvisación, sin incomodidades.</p>
     </div>
     <div class="include-item">
       <span class="include-icon">✦</span>
@@ -756,26 +760,28 @@
     </div>
     <div class="include-item">
       <span class="include-icon">✦</span>
-      <div class="include-title">Kit de expedición</div>
-      <p class="include-desc">Termo, dry bag, linterna frontal, y el objeto de legado del último día.</p>
+      <div class="include-title">Comunicación y energía</div>
+      <p class="include-desc">Teléfono satelital, GPS activo y carga solar de dispositivos. Cero zonas muertas, cero desconexión forzada.</p>
     </div>
     <div class="include-item">
       <span class="include-icon">✦</span>
       <div class="include-title">Seguro médico</div>
-      <p class="include-desc">Cobertura de asistencia médica durante toda la expedición.</p>
+      <p class="include-desc">Cobertura total de asistencia médica durante toda la expedición. Tu seguridad no es un anexo — es un pilar.</p>
     </div>
     <div class="include-item">
       <span class="include-icon">✦</span>
-      <div class="include-title">Ingresos y tasas</div>
-      <p class="include-desc">Contribución turística y todos los permisos de acceso a sitios naturales incluidos.</p>
+      <div class="include-title">Permisos e ingresos</div>
+      <p class="include-desc">Gestión de ingresos a reservas indígenas y parques nacionales. Sin filas, sin trámites.</p>
     </div>
     <div class="include-item">
       <span class="include-icon">✦</span>
-      <div class="include-title">Comunicación satelital</div>
-      <p class="include-desc">Teléfono satelital y GPS activo durante toda la expedición. Cero zonas muertas.</p>
+      <div class="include-title">Kit de expedición</div>
+      <p class="include-desc">Termo, dry bag, linterna frontal y objeto de legado del último día. Todo listo antes de zarpar.</p>
     </div>
   </div>
 </section>
+
+
 
 <!-- PRICE -->
 <div class="price-block">
@@ -784,6 +790,7 @@
     <span class="price-currency">USD </span>1,100
   </div>
   <p class="price-detail">Todo incluido · Grupos privados de máximo 6 personas</p>
+  <p style="font-size:12px;color:var(--gold);opacity:0.7;margin-top:8px;letter-spacing:0.1em;">Exento de IVA para extranjeros</p>
   <p class="price-note">Primera salida: agosto 2026 · Cupos muy limitados</p>
 </div>
 
@@ -792,7 +799,7 @@
 <!-- FORM -->
 <section class="form-section" id="reserva">
   <div class="form-wrap">
-    <h2 class="form-title">Reserva tu cupo</h2>
+    <h2 class="form-title">Solicitar itinerario detallado</h2>
     <p class="form-subtitle">
       Estamos abriendo la siguiente salida. Si quieres ser parte, déjanos tus datos y te contactamos en menos de 24 horas.
     </p>
@@ -835,7 +842,7 @@
         </div>
       </div>
 
-      <button type="submit" class="form-submit">Quiero un cupo →</button>
+      <button type="submit" class="form-submit">ENVIAR SOLICITUD DE EXPEDICIÓN →</button>
       <p class="form-legal">Al dejar tus datos no estás adquiriendo ningún compromiso de pago. Te contactaremos para contarte más sobre la expedición y confirmar disponibilidad.</p>
     </form>
 
