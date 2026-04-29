@@ -44,7 +44,7 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(to bottom, rgba(26,22,16,0.3) 0%, rgba(26,22,16,0.1) 40%, rgba(26,22,16,0.85) 100%),
+      linear-gradient(to bottom, rgba(26,22,16,0.3) 0%, rgba(26,22,16,0.1) 40%, rgba(26,22,16,0.92) 100%),
       url('https://i.ibb.co/YBnptYW9/42240513484-97c410db87-k.jpg') center/cover no-repeat;
     transform: scale(1.05);
     animation: slowzoom 20s ease-out forwards;
@@ -69,6 +69,9 @@
     opacity: 0;
     animation: fadein 1s 0.5s forwards;
     text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+    background: rgba(26,22,16,0.45);
+    padding: 6px 16px;
+    white-space: nowrap;
   }
 
   .hero-content {
@@ -98,6 +101,7 @@
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 20px;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.8);
   }
 
   .hero-title {
@@ -412,6 +416,9 @@
   .form-section {
     background: rgba(255,255,255,0.02);
     border-top: 1px solid rgba(212,168,83,0.15);
+    max-width: 100%;
+    padding: 100px 32px;
+    text-align: center;
   }
 
   .form-wrap {
@@ -623,6 +630,16 @@
     .include-title { font-size: 15px; }
     .include-desc { font-size: 14px; line-height: 1.7; }
     .includes-grid { grid-template-columns: 1fr; }
+    .hero { padding: 0 0 100px; }
+    .hero-title { font-size: 38px; line-height: 1.05; }
+    .hero-content { padding: 0 20px; }
+    .hero-sub { font-size: 14px; margin-bottom: 32px; }
+    .hero-stats { gap: 16px; margin-bottom: 32px; }
+    .stat-num { font-size: 24px; }
+    .stat-label { font-size: 9px; }
+    .hero-divider { height: 28px; }
+    .cta-primary { padding: 15px 28px; font-size: 12px; }
+    .hero-tag { font-size: 9px; letter-spacing: 0.15em; padding: 5px 12px; top: 24px; }
   }
 </style>
 </head>
@@ -634,12 +651,12 @@
   <span class="hero-tag">Expedición Mavicure · Guainía, Colombia</span>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">Cerros de Mavicure, Guainía</p>
+    <p class="hero-eyebrow" style="display:inline-block;background:rgba(26,22,16,0.55);padding:5px 14px;">Cerros de Mavicure, Guainía</p>
     <h1 class="hero-title">
       Donde el tiempo<br>se detuvo hace<br><em>1,700 millones</em><br>de años.
     </h1>
     <p class="hero-sub">
-      Una expedición privada de 4 días diseñada para quienes buscan silencio absoluto, no solo un paisaje. Máximo 6 exploradores por grupo.
+      Reserva con depósito parcial. Cupos muy limitados para agosto 2026.
     </p>
 
     <div class="hero-stats">
@@ -659,10 +676,19 @@
       </div>
     </div>
 
-    <a href="#reserva" class="cta-primary">Solicitar itinerario</a>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;max-width:400px;margin:0 auto;">
+      <a href="https://wa.me/573136814836?text=Hola%2C%20quiero%20el%20itinerario%20detallado%20de%20la%20Expedici%C3%B3n%20Mavicure" target="_blank" class="cta-primary" style="background:var(--gold);color:var(--ink);display:flex;align-items:center;gap:10px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.668 5.1 1.84 7.26L1 31l7.94-1.82A14.94 14.94 0 0 0 16 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.5a12.44 12.44 0 0 1-6.32-1.72l-.45-.27-4.71 1.08 1.1-4.6-.3-.47A12.5 12.5 0 1 1 16 28.5zm6.84-9.37c-.37-.19-2.2-1.09-2.54-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.22.25-.43.28-.8.09-.37-.19-1.56-.57-2.97-1.83-1.1-.98-1.84-2.19-2.05-2.56-.22-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.03-1.15-2.78-.3-.73-.61-.63-.84-.64h-.72c-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.61.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.2-.9 2.51-1.77.31-.87.31-1.62.22-1.77-.09-.16-.34-.25-.71-.44z"/></svg>
+        WhatsApp
+      </a>
+      <a href="#reserva" class="cta-primary">
+        Solicitar por email
+      </a>
+    </div>
   </div>
 
-  <div style="position:absolute;bottom:16px;right:20px;font-size:10px;color:rgba(245,240,232,0.35);letter-spacing:0.05em;z-index:3;text-align:right;">"Cerros del Mavicure, Guainía, Colombia" · Felipe Rodríguez-Moreno · CC BY-NC-ND 2.0</div>
+  <div style="position:absolute;bottom:16px;right:20px;font-size:10px;color:rgba(245,240,232,0.35);letter-spacing:0.05em;z-index:3;text-align:right;display:none;" class="photo-credit">"Cerros del Mavicure, Guainía, Colombia" · Felipe Rodríguez-Moreno · CC BY-NC-ND 2.0</div>
+  <style>@media(min-width:641px){.photo-credit{display:block!important;}}</style>
 
   <div class="scroll-hint">
     <span>Descubrir</span>
@@ -783,6 +809,62 @@
 
 
 
+<!-- ANCLAJE DE VALOR -->
+<section style="max-width:900px;margin:0 auto;padding:80px 32px;">
+  <span class="section-label">La diferencia</span>
+  <h2 class="section-title">La diferencia entre un viaje<br><em>y una expedición de autor.</em></h2>
+
+  <p style="font-size:16px;font-weight:300;color:rgba(245,240,232,0.7);line-height:1.9;max-width:620px;margin-bottom:56px;">
+    Hemos eliminado la improvisación para que usted solo se ocupe de la experiencia.
+  </p>
+
+  <div style="display:grid;grid-template-columns:1fr;gap:0;border:1px solid rgba(212,168,83,0.15);">
+
+    <div style="display:grid;grid-template-columns:40px 1fr;gap:20px;padding:28px 32px;border-bottom:1px solid rgba(212,168,83,0.1);align-items:start;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:rgba(212,168,83,0.3);line-height:1;">01</span>
+      <div>
+        <div style="font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:6px;">Logística de guante blanco</div>
+        <p style="font-size:13px;font-weight:300;color:var(--mist);line-height:1.7;">Desde su aterrizaje en Inírida hasta su retorno, cada traslado, tiquete y permiso está gestionado. Navegación en lanchas privadas con protección térmica y kit de confort. Usted no gestiona nada; nosotros resolvemos todo.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:40px 1fr;gap:20px;padding:28px 32px;border-bottom:1px solid rgba(212,168,83,0.1);align-items:start;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:rgba(212,168,83,0.3);line-height:1;">02</span>
+      <div>
+        <div style="font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:6px;">El valor de la exclusividad</div>
+        <p style="font-size:13px;font-weight:300;color:var(--mist);line-height:1.7;">Sin grupos masivos ni itinerarios compartidos. La expedición es solo para usted y sus acompañantes (máximo 6 personas). Esto nos permite ajustar el ritmo de la ruta a sus necesidades, no a las de un grupo de desconocidos.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:40px 1fr;gap:20px;padding:28px 32px;border-bottom:1px solid rgba(212,168,83,0.1);align-items:start;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:rgba(212,168,83,0.3);line-height:1;">03</span>
+      <div>
+        <div style="font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:6px;">Seguridad de estándar internacional</div>
+        <p style="font-size:13px;font-weight:300;color:var(--mist);line-height:1.7;">Operamos en territorio remoto con protocolos de comunicación satelital Garmin InReach activos 24/7 y seguros de asistencia médica de cobertura total. La aventura aquí no es sinónimo de riesgo.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:40px 1fr;gap:20px;padding:28px 32px;border-bottom:1px solid rgba(212,168,83,0.1);align-items:start;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:rgba(212,168,83,0.3);line-height:1;">04</span>
+      <div>
+        <div style="font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:6px;">Gastronomía diseñada</div>
+        <p style="font-size:13px;font-weight:300;color:var(--mist);line-height:1.7;">La selva no es un sacrificio. Ofrecemos menús curados con variedad de proteínas y opciones orgánicas locales, servidos en entornos privados y confortables.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:40px 1fr;gap:20px;padding:28px 32px;align-items:start;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:rgba(212,168,83,0.3);line-height:1;">05</span>
+      <div>
+        <div style="font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:6px;">Acceso al origen</div>
+        <p style="font-size:13px;font-weight:300;color:var(--mist);line-height:1.7;">Acceso privilegiado a los Cerros de Mavicure antes de la llegada del turismo convencional. Una inmersión técnica y mística en el Escudo Guayanés (1.700 millones de años) con guías que son intérpretes del territorio.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="line-divider"></div>
+
 <!-- PRICE -->
 <div class="price-block">
   <span class="price-from">Inversión por persona</span>
@@ -791,7 +873,16 @@
   </div>
   <p class="price-detail">Todo incluido · Grupos privados de máximo 6 personas</p>
   <p style="font-size:12px;color:var(--gold);opacity:0.7;margin-top:8px;letter-spacing:0.1em;">Exento de IVA para extranjeros</p>
+  <p style="font-size:13px;color:var(--cream);margin-top:16px;font-weight:300;">Inscripción con depósito de <strong>USD 200</strong> · Saldo restante a 30 días de la salida</p>
+  <p style="font-size:12px;color:var(--mist);margin-top:8px;font-style:italic;font-family:'Cormorant Garamond',serif;">Garantía de asistencia extrema en ruta</p>
   <p class="price-note">Primera salida: agosto 2026 · Cupos muy limitados</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:32px;">
+    <a href="https://wa.me/573136814836?text=Hola%2C%20quiero%20el%20itinerario%20detallado%20de%20la%20Expedici%C3%B3n%20Mavicure" target="_blank" class="cta-primary" style="background:var(--gold);color:var(--ink);display:inline-flex;align-items:center;gap:10px;text-decoration:none;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="currentColor"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.668 5.1 1.84 7.26L1 31l7.94-1.82A14.94 14.94 0 0 0 16 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.5a12.44 12.44 0 0 1-6.32-1.72l-.45-.27-4.71 1.08 1.1-4.6-.3-.47A12.5 12.5 0 1 1 16 28.5zm6.84-9.37c-.37-.19-2.2-1.09-2.54-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.22.25-.43.28-.8.09-.37-.19-1.56-.57-2.97-1.83-1.1-.98-1.84-2.19-2.05-2.56-.22-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.03-1.15-2.78-.3-.73-.61-.63-.84-.64h-.72c-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.61.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.2-.9 2.51-1.77.31-.87.31-1.62.22-1.77-.09-.16-.34-.25-.71-.44z"/></svg>
+      Escribir por WhatsApp
+    </a>
+    <a href="#reserva" class="cta-primary" style="text-decoration:none;">Solicitar por email</a>
+  </div>
 </div>
 
 <div class="line-divider"></div>
@@ -799,9 +890,9 @@
 <!-- FORM -->
 <section class="form-section" id="reserva">
   <div class="form-wrap">
-    <h2 class="form-title">Solicitar itinerario detallado</h2>
+    <h2 class="form-title">Prefiero el email</h2>
     <p class="form-subtitle">
-      Estamos abriendo la siguiente salida. Si quieres ser parte, déjanos tus datos y te contactamos en menos de 24 horas.
+      Déjanos tu nombre y correo. Te enviamos el itinerario completo y te contactamos en menos de 24 horas. Sin compromiso de pago.
     </p>
 
     <form id="waitlistForm" action="https://formspree.io/f/xvzvaery" method="POST">
@@ -815,35 +906,8 @@
         <input class="form-input" type="email" id="email" name="email" placeholder="tu@correo.com" required>
       </div>
 
-      <div class="form-group">
-        <label class="form-label" for="whatsapp">WhatsApp (opcional)</label>
-        <input class="form-input" type="tel" id="whatsapp" name="whatsapp" placeholder="+57 300 000 0000">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">¿Cuándo podrías viajar?</label>
-        <div class="form-radio-group">
-          <div class="radio-option">
-            <input type="radio" name="fecha" id="f1" value="antes-junio">
-            <label class="radio-label" for="f1">Antes de junio</label>
-          </div>
-          <div class="radio-option">
-            <input type="radio" name="fecha" id="f2" value="julio-agosto">
-            <label class="radio-label" for="f2">Julio — Agosto</label>
-          </div>
-          <div class="radio-option">
-            <input type="radio" name="fecha" id="f3" value="septiembre-adelante">
-            <label class="radio-label" for="f3">Septiembre en adelante</label>
-          </div>
-          <div class="radio-option">
-            <input type="radio" name="fecha" id="f4" value="explorando">
-            <label class="radio-label" for="f4">Solo explorando</label>
-          </div>
-        </div>
-      </div>
-
       <button type="submit" class="form-submit">ENVIAR SOLICITUD DE EXPEDICIÓN →</button>
-      <p class="form-legal">Al dejar tus datos no estás adquiriendo ningún compromiso de pago. Te contactaremos para contarte más sobre la expedición y confirmar disponibilidad.</p>
+      <p class="form-legal">Sin compromiso de pago. Solo una conversación para confirmar disponibilidad.</p>
     </form>
 
     <div class="success-msg" id="successMsg">
@@ -853,6 +917,12 @@
     </div>
   </div>
 </section>
+
+<a href="https://wa.me/573136814836?text=Hola%2C%20me%20interesa%20la%20Expedici%C3%B3n%20Mavicure.%20%C2%BFPueden%20enviarme%20el%20itinerario%20detallado%3F" target="_blank" style="position:fixed;bottom:28px;right:28px;z-index:9999;background:#25D366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.35);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 24px rgba(0,0,0,0.45)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.35)'" title="Escríbenos por WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white">
+    <path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.668 5.1 1.84 7.26L1 31l7.94-1.82A14.94 14.94 0 0 0 16 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.5a12.44 12.44 0 0 1-6.32-1.72l-.45-.27-4.71 1.08 1.1-4.6-.3-.47A12.5 12.5 0 1 1 16 28.5zm6.84-9.37c-.37-.19-2.2-1.09-2.54-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.22.25-.43.28-.8.09-.37-.19-1.56-.57-2.97-1.83-1.1-.98-1.84-2.19-2.05-2.56-.22-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.03-1.15-2.78-.3-.73-.61-.63-.84-.64h-.72c-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.61.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.2-.9 2.51-1.77.31-.87.31-1.62.22-1.77-.09-.16-.34-.25-.71-.44z"/>
+  </svg>
+</a>
 
 <footer>
   <div class="footer-logo">Expedición Mavicure</div>
